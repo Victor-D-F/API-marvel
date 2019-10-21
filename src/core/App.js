@@ -1,23 +1,17 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+
+import { CardList, Character } from '../pages'
 import './App.css'
-import { Navbar, Card } from '../components'
 
 const App = () => {
-  const [search, setSearch] = useState('')
-
-  const handleSearch = value => {
-    setSearch(value)
-  }
-
   return (
-    <div className="App">
-      <div className="App-header">
-        <Navbar handleSearch={handleSearch} />
-      </div>
-      <div className="card-group">
-        <Card filter={search} />
-      </div>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/" exact component={CardList} />
+        <Route path="/char" exact component={Character} />
+      </Switch>
+    </Router>
   )
 }
 
