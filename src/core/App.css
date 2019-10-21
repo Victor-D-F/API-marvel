@@ -1,0 +1,11 @@
+body {
+  background-color: whitesmoke;
+}
+
+.Navbar {
+  border-bottom: 1px solid gray;
+  background-color: #ec1d23;
+}
+.Navbar img {
+  width: 120px;
+}
